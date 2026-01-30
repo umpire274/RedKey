@@ -8,8 +8,12 @@ fn main() -> anyhow::Result<()> {
         .with_env_filter(tracing_subscriber::EnvFilter::from_default_env())
         .init();
 
+    let icon = eframe::icon_data::from_png_bytes(include_bytes!("../res/redkey_256.png"))
+        .expect("Failed to load icon");
+
     let native_options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
+            .with_icon(icon)
             .with_title("RedKey")
             .with_inner_size([1000.0, 650.0]),
         ..Default::default()
