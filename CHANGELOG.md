@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.1] - 2026-01-30
+
+### Fixed
+
+- Corrected window icon handling in the GUI by using `egui::IconData` with embedded PNG assets.
+- Removed incorrect usage of raw `.ico` bytes in `eframe::NativeOptions`.
+
+### Improved
+
+- Improved Windows compatibility and correctness of GUI initialization.
+- Clarified separation between executable icon (Windows resource) and window icon (runtime).
+
+### Internal
+
+- Minor cleanup of GUI bootstrap code.
+
+---
+
 ## [0.1.0] – 2026-01-13
 
 ### Added
